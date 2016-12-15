@@ -15,7 +15,7 @@ public class crscillitoeAudioPlayer {
 	}
 	
  
-  public void playSound() {
+  public void play() {
     try
     {
       InputStream inputStream = getClass().getResourceAsStream(SOUND_FILENAME);
