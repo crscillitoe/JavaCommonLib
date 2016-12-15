@@ -5,26 +5,57 @@ import sun.audio.*;
 
 public class crscillitoeAudioPlayer {
 	String SOUND_FILENAME;
+	InputStream inputStream;
+	AudioStream audioStream;
 	
+	
+	/**
+	 * Constructor for crscillitoeAudioPlayer, you must pass it the filePath of the audio
+	 * file you wish to play.
+	 * @param filePath
+	 */
 	public crscillitoeAudioPlayer(String filePath) {
 		this.SOUND_FILENAME = filePath;
 	}
 	
+	/**
+	 * Changes the file path to the given path.
+	 * @param s
+	 */
 	public void setFilePath(String s) {
 		this.SOUND_FILENAME = s;
 	}
 	
- 
-  public void play() {
-    try
-    {
-      InputStream inputStream = getClass().getResourceAsStream(SOUND_FILENAME);
-      AudioStream audioStream = new AudioStream(inputStream);
-      AudioPlayer.player.start(audioStream);
-    }
-    catch (Exception e)
-    {
-      e.printStackTrace();
-    }
-  }
+	/**
+	 * Returns the file path.
+	 * @return
+	 */
+	public String getFilePath() {
+		return SOUND_FILENAME;
+	}
+	
+	/**
+	 * Plays the audio.
+	 */
+	public void play() {
+	    try {
+	      inputStream = getClass().getResourceAsStream(SOUND_FILENAME);
+	      audioStream = new AudioStream(inputStream);
+	      AudioPlayer.player.start(audioStream);
+	    }
+	    catch (Exception e) {
+	      e.printStackTrace();
+	    }
+	}
+	
+	/**
+	 * Stops the audio.
+	 */
+	public void stop() {
+		try {
+			AudioPlayer.player.stop(audioStream);
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
 }
