@@ -53,11 +53,29 @@ public class JavaMath {
 
 		return arbDif * (val / valDif);
 	}
+	
 
+	/**
+	 * Returns hypotenuse of right triangle with side lengths a, b
+	 * 
+	 * @param a 
+	 * @param b
+	 * @return
+	 */
 	public static double hypotenuse(double a, double b) {
 		return Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2));
 	}
 
+	/**
+	 * Returns double-array of solutions to 2nd-Degree polynomial, only 
+	 * 		will return if real solutions
+	 * ax^2 + bx + c
+	 * 
+	 * @param a 
+	 * @param b
+	 * @param c
+	 * @return
+	 */
 	public static double[] polysmltReal(double a, double b, double c)  {
 		if (a == 0)
 		{
@@ -82,11 +100,25 @@ public class JavaMath {
 		return solutions;
 	}
 
+	/**
+	 * Returns String-array of solutions to 2nd-Degree polynomial, includes imaginary solutions
+	 * ax^2 + bx + c
+	 * 
+	 * @param a 
+	 * @param b
+	 * @param c
+	 * @return
+	 */
 	public static String[] polysmltImaginary(double a, double b, double c) {
 
 		if (a == 0) {
-			String[] sols = { "Divide by Zero", "Divide by Zero" };
-			return sols;
+			try {
+				throw new Exception("Dividing by zero");
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			return null;
 		} else {
 			String sol1 = "" + (-b / (2 * a)) + "+i*"
 					+ Math.sqrt(Math.abs(Math.pow(b, 2) - 4 * a * c)) / (2 * a);
