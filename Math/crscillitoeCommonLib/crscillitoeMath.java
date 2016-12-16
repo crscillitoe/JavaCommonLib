@@ -30,4 +30,21 @@ public class crscillitoeMath {
 	public static double random(int ceiling) {
 		return random(0 , ceiling);
 	}
+	
+	/**
+	 * Scales val from valFloor to valCeil into a new val from arbFloor to arbCeil
+	 * @param val
+	 * @param valFloor
+	 * @param valCeil
+	 * @param arbFloor
+	 * @param arbCeil
+	 * @return
+	 */
+	public static float map(float val , float valFloor , float valCeil , float arbFloor , float arbCeil) {
+		
+		float valDif = valCeil - valFloor;
+		float arbDif = arbCeil - arbFloor;
+		
+		return arbDif * (val/valDif);
+	}
 }
