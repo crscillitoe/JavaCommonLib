@@ -1,9 +1,9 @@
-package crscillitoeCommonLib;
+package JavaCommonLib;
 
 import java.io.*;
 import sun.audio.*;
 
-public class crscillitoeAudioPlayer {
+public class JavaAudioPlayer {
 	String SOUND_FILENAME;
 	InputStream inputStream;
 	@SuppressWarnings("restriction")
@@ -15,7 +15,7 @@ public class crscillitoeAudioPlayer {
 	 * file you wish to play.
 	 * @param filePath
 	 */
-	public crscillitoeAudioPlayer(String filePath) {
+	public JavaAudioPlayer(String filePath) {
 		this.SOUND_FILENAME = filePath;
 	}
 	

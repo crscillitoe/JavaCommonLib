@@ -1,6 +1,6 @@
-package crscillitoeCommonLib;
+package JavaCommonLib;
 
-public class crscillitoeMath {
+public class JavaMath {
 
 	/**
 	 * Returns a random integer between floor and ceiling, inclusive

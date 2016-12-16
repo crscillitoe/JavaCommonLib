@@ -1,8 +1,8 @@
-package crscillitoeCommonLib;
+package JavaCommonLib;
 
 import javax.swing.JFrame;
 
-public class crscillitoeJFrameBuilder {
+public class JavaJFrameBuilder {
 
 	/**
 	 * Returns a generic JFrame with some normal defaulted options.
