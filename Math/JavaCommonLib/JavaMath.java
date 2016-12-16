@@ -2,6 +2,8 @@ package JavaCommonLib;
 
 public class JavaMath {
 
+	
+	
 	/**
 	 * Returns the maximum integer within the given array
 	 * @param toCheck

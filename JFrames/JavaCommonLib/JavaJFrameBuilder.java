@@ -1,5 +1,7 @@
 package JavaCommonLib;
 
+import java.awt.Component;
+
 import javax.swing.JFrame;
 
 public class JavaJFrameBuilder {
@@ -18,6 +20,18 @@ public class JavaJFrameBuilder {
 		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		f.setLayout(null);
 		return f;
+		
+	}
+
+	/**
+	 * Allows the user to add any variable number of components in one function call.
+	 * @param f
+	 * @param c
+	 */
+	public static void add(JFrame f , Component...c) {
+		for(Component co : c) {
+			f.add(co);
+		}
 	}
 	
 }
