@@ -6,6 +6,7 @@ import sun.audio.*;
 public class crscillitoeAudioPlayer {
 	String SOUND_FILENAME;
 	InputStream inputStream;
+	@SuppressWarnings("restriction")
 	AudioStream audioStream;
 	
 	
@@ -37,6 +38,7 @@ public class crscillitoeAudioPlayer {
 	/**
 	 * Plays the audio.
 	 */
+	@SuppressWarnings("restriction")
 	public void play() {
 	    try {
 	      inputStream = getClass().getResourceAsStream(SOUND_FILENAME);
@@ -51,6 +53,7 @@ public class crscillitoeAudioPlayer {
 	/**
 	 * Stops the audio.
 	 */
+	@SuppressWarnings("restriction")
 	public void stop() {
 		try {
 			AudioPlayer.player.stop(audioStream);
