@@ -105,24 +105,13 @@ public class JavaMath {
 	 * @param b
 	 * @param c
 	 * @return
+	 * @throws Exception 
 	 */
-	public static double[] polysmltReal(double a, double b, double c)  {
-		if (a == 0)
-		{
-			try {
+	public static double[] polysmltReal(double a, double b, double c) throws Exception  {
+		if (a == 0) {
 				throw new Exception("Dividing by zero");
-			} catch (Exception e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-		} else if(Math.pow(b, 2) - 4 * a * c < 0)
-		{
-			try {
+		} else if(Math.pow(b, 2) - 4 * a * c < 0) {
 				throw new Exception("Imaginary solutions");
-			} catch (Exception e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
 		}
 		double[] solutions = {
 				(-b + Math.sqrt(Math.pow(b, 2) - 4 * a * c)) / (2 * a),
@@ -138,17 +127,12 @@ public class JavaMath {
 	 * @param b
 	 * @param c
 	 * @return
+	 * @throws Exception 
 	 */
-	public static String[] polysmltImaginary(double a, double b, double c) {
+	public static String[] polysmltImaginary(double a, double b, double c) throws Exception {
 
 		if (a == 0) {
-			try {
 				throw new Exception("Dividing by zero");
-			} catch (Exception e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-			return null;
 		} else {
 			String sol1 = "" + (-b / (2 * a)) + "+i*"
 					+ Math.sqrt(Math.abs(Math.pow(b, 2) - 4 * a * c)) / (2 * a);
