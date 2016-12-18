@@ -23,6 +23,10 @@ public class JavaJFrameBuilder {
 		
 	}
 
+  public void testFunction() {
+    JavaMath.randInt(5 , 10);
+  }
+
 	/**
 	 * Allows the user to add any variable number of components in one function call.
 	 * @param f

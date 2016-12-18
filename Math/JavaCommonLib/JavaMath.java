@@ -24,11 +24,12 @@ public class JavaMath {
 	 */
 	public static int maxValue(Iterable<Integer> toCheck) {
 		int x = Integer.MIN_VALUE;
-		for(Integer i : toCheck) {
+		
+    for(Integer i : toCheck) {
 			if(i > x) {
 				x = i;
 			}
-		}
+    }
 		return x;
 	}
 
