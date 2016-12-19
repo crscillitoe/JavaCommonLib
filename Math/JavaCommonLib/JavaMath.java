@@ -2,7 +2,20 @@ package JavaCommonLib;
 
 public class JavaMath {
 
-	
+  /**
+   * Returns the minimum integer within the given array
+   * @param toCheck
+   * @return
+   */
+  public static int minValue(Iterable<Integer> toCheck) {
+    int x = Integer.MAX_VALUE;
+    for(Integer i : toCheck) {
+      if(i < x) {
+        x = i;
+      }
+    }
+    return x;
+  }
 	
 	/**
 	 * Returns the maximum integer within the given array
@@ -11,11 +24,12 @@ public class JavaMath {
 	 */
 	public static int maxValue(Iterable<Integer> toCheck) {
 		int x = Integer.MIN_VALUE;
-		for(Integer i : toCheck) {
+		
+    for(Integer i : toCheck) {
 			if(i > x) {
 				x = i;
 			}
-		}
+    }
 		return x;
 	}
 
