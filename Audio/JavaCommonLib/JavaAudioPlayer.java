@@ -11,7 +11,7 @@ public class JavaAudioPlayer {
 	
 	
 	/**
-	 * Constructor for crscillitoeAudioPlayer, you must pass it the filePath of the audio
+	 * Constructor for JavaCommonLibAudioPlayer, you must pass it the filePath of the audio
 	 * file you wish to play.
 	 * @param filePath
 	 */

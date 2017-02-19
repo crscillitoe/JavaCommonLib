@@ -28,6 +28,7 @@ public class JavaMath {
     for(Integer i : toCheck) {
 			if(i > x) {
 				x = i;
+        Integer.
 			}
     }
 		return x;

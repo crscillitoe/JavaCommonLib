@@ -17,6 +17,7 @@ public class JavaArrays {
     public static String ArrayToString(char [] toPrint) {
 
         String pretty = "[";
+        Integer.
         for(int i = 0; i<toPrint.length - 1; i++){
             pretty += toPrint[i] + ", ";
         }
